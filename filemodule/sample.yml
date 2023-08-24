@@ -2,7 +2,7 @@
   become: true
   hosts: all
   tasks:
-    - name: Create multiple file
+    - name: Create multiple files by using with_items
       file:
         path: "{{ item.path }}"
         owner: "{{ item.owner }}"
@@ -11,3 +11,12 @@
       with_items:
         - { path: /home/ubuntu/1.txt, owner: ubuntu, mode: 0644}
         - { path: /home/ubuntu/2.txt, owner: ubuntu, mode: 0644}
+
+    - name: Create mutltiple file by using loops
+      file:
+        path: "{{ item,.path }}"
+        owner: "{{ item.owner }}"
+        state: touch
+      loop:
+        - { path: /home/ubuntu/3.txt, owner: ubuntu}
+        - { path: /home/ubuntu/4.txt, owner: ubuntu}
