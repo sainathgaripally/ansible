@@ -26,22 +26,18 @@
     - name: Register with items 
       command: echo {{ item }}
       with_items:
-        - 1
         - [4, 5]
-        - 10
       register: withitemvariable
     
     - name: Register with loop 
       command: echo {{ item }}
       loop:
-        - 1
         - [4, 5]
-        - 10
       register: withloopvariable
 
     - name: Debug both withitem 
       debug:
-        var: withitemvariable.results[1].item
+        var: withitemvariable.results
 
     # - name: Debug both loop
     #   debug:
