@@ -41,8 +41,8 @@
 
     - name: Debug both withitem 
       debug:
-        var: withitemvariable
+        var: withitemvariable.stdout
 
     - name: Debug both loop
       debug:
-        var: withloopvariable
+        var: withloopvariable.stdout
