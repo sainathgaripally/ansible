@@ -1,0 +1,118 @@
+{
+    "withloopvariable": {
+    "changed": true,
+    "msg": "All items completed",
+    "results": [
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": [
+                "echo",
+                "1"
+            ],
+            "delta": "0:00:00.004345",
+            "end": "2023-08-24 08:32:40.421336",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "echo 1",
+                    "_uses_shell": false,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true
+                }
+            },
+            "item": 1,
+            "msg": "",
+            "rc": 0,
+            "start": "2023-08-24 08:32:40.416991",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": "1",
+            "stdout_lines": [
+                "1"
+            ]
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": [
+                "echo",
+                "[4,",
+                "5]"
+            ],
+            "delta": "0:00:00.004184",
+            "end": "2023-08-24 08:32:40.732334",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "echo [4, 5]",
+                    "_uses_shell": false,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true
+                }
+            },
+            "item": [
+                4,
+                5
+            ],
+            "msg": "",
+            "rc": 0,
+            "start": "2023-08-24 08:32:40.728150",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": "[4, 5]",
+            "stdout_lines": [
+                "[4, 5]"
+            ]
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": [
+                "echo",
+                "10"
+            ],
+            "delta": "0:00:00.004078",
+            "end": "2023-08-24 08:32:41.037201",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "echo 10",
+                    "_uses_shell": false,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true
+                }
+            },
+            "item": 10,
+            "msg": "",
+            "rc": 0,
+            "start": "2023-08-24 08:32:41.033123",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": "10",
+            "stdout_lines": [
+                "10"
+            ]
+        }
+    ],
+    "skipped": false
+}
+}
