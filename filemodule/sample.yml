@@ -11,7 +11,7 @@
       with_items:
         - { path: /home/ubuntu/1.txt, owner: ubuntu, mode: 0644}
         - { path: /home/ubuntu/2.txt, owner: ubuntu, mode: 0644}
-        register: withitemvariable
+      register: withitemvariable
 
     - name: Create mutltiple file by using loops
       file:
@@ -21,4 +21,4 @@
       loop:
         - { path: /home/ubuntu/3.txt, owner: ubuntu}
         - { path: /home/ubuntu/4.txt, owner: ubuntu}
-        register: loopvariable
+      register: loopvariable
