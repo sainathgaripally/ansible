@@ -8,3 +8,26 @@ failed: [node1] (item={'path': '/home/ubuntu/2.txt', 'owner': 'ubuntu', 'mode': 
 "mode": "0644", "msg": "mode must be in octal or symbolic form", "owner": "ubuntu", "path": "/home/ubuntu/2.txt", "size": 0, "state": "file", "uid": 1000}
 
 -------------------------------------------------------------------------------------------------------
+
+```
+- name: Register with items 
+    command: echo {{ item }}
+    with_items:
+    - [4, 5]
+    register: withitemvariable
+```
+For the above code the output is
+TASK [Register with items] *************************************************************************************************************************************************
+changed: [node1] => (item=4)
+changed: [node1] => (item=5)
+
+```
+- name: Register with items 
+    command: echo {{ item }}
+    loop:
+    - [4, 5]
+    register: withloopvariable
+```
+For the above code the output is
+TASK [Register with loop] **************************************************************************************************************************************************
+changed: [node1] => (item=[4, 5])

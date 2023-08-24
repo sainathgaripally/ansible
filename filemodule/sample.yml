@@ -31,14 +31,5 @@
     
     - name: Register with loop 
       command: echo {{ item }}
-      loop:
-        - [4, 5]
+      loop: "{{ [4, 5] | flattened(1)}}"
       register: withloopvariable
-
-    - name: Debug both withitem 
-      debug:
-        var: withitemvariable.results
-
-    # - name: Debug both loop
-    #   debug:
-    #     var: withloopvariable.stdout
