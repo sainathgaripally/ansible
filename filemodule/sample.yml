@@ -22,3 +22,11 @@
         - { path: /home/ubuntu/3.txt, owner: ubuntu}
         - { path: /home/ubuntu/4.txt, owner: ubuntu}
       register: loopvariable
+
+    - name: Debug the loopvariable
+      debug:
+        var: withitemvariable
+      
+    - name: Debug the withitemvariable
+      debug:
+        var: loopvariable
