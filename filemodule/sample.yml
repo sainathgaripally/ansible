@@ -41,7 +41,7 @@
 
     - name: Debug both withitem 
       debug:
-        var: withitemvariable.results
+        var: withitemvariable.results.item
 
     # - name: Debug both loop
     #   debug:
