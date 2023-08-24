@@ -14,7 +14,7 @@
 
     - name: Create mutltiple file by using loops
       file:
-        path: "{{ item,.path }}"
+        path: "{{ item.path }}"
         owner: "{{ item.owner }}"
         state: touch
       loop:
