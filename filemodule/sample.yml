@@ -24,7 +24,7 @@
       register: loopvariable
 
     - name: Register with items 
-      coammand: echo {{ item }}
+      command: echo {{ item }}
       with_items:
         - 1
         - [4, 5]
@@ -32,6 +32,7 @@
       register: withitemvariable
     
     - name: Register with loop 
+      command: echo {{ item }}
       loop:
         - 1
         - [4, 5]
