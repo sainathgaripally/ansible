@@ -23,10 +23,23 @@
         - { path: /home/ubuntu/4.txt, owner: ubuntu}
       register: loopvariable
 
-    - name: Debug the loopvariable
+    - name: Register with items 
+      with_items:
+        - 1
+        - [4, 5]
+        - 10
+      register: withitemvariable
+    
+    - name: Register with loop 
+      loop:
+        - 1
+        - [4, 5]
+        - 10
+      register: withloopvariable
+
+    - name: Debug both withitem and loop
       debug:
-        var: withitemvariable
-      
-    - name: Debug the withitemvariable
-      debug:
-        var: loopvariable
+        var: 
+          - withitemvariable
+          - withloopvariable
+    
