@@ -39,9 +39,10 @@
         - 10
       register: withloopvariable
 
-    - name: Debug both withitem and loop
+    - name: Debug both withitem 
       debug:
-        var: 
-          - withitemvariable
-          - withloopvariable
-    
+        var: withitemvariable
+
+    - name: Debug both loop
+      debug:
+        var: withloopvariable
