@@ -1,0 +1,10 @@
+Getting below error when i kept the mode as 0755
+------------------------------------------------------------------------------------------------------
+
+changed: [node1] => (item={'path': '/home/ubuntu/1.txt', 'owner': 'ubuntu', 'mode': 420})
+failed: [node1] (item={'path': '/home/ubuntu/2.txt', 'owner': 'ubuntu', 'mode': 493}) =>
+{"ansible_loop_var": "item", "changed": false, "details": "bad symbolic permission for mode: 493",
+"gid": 0, "group": "root", "item": {"mode": 493, "owner": "ubuntu", "path": "/home/ubuntu/2.txt"}, 
+"mode": "0644", "msg": "mode must be in octal or symbolic form", "owner": "ubuntu", "path": "/home/ubuntu/2.txt", "size": 0, "state": "file", "uid": 1000}
+
+-------------------------------------------------------------------------------------------------------
