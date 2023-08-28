@@ -8,7 +8,8 @@ failed: [node1] (item={'path': '/home/ubuntu/2.txt', 'owner': 'ubuntu', 'mode': 
 "mode": "0644", "msg": "mode must be in octal or symbolic form", "owner": "ubuntu", "path": "/home/ubuntu/2.txt", "size": 0, "state": "file", "uid": 1000}
 
 -------------------------------------------------------------------------------------------------------
-
+Using with_items:
+------------------
 ```
 - name: Register with items 
     command: echo {{ item }}
@@ -21,6 +22,8 @@ TASK [Register with items] *****************************************************
 changed: [node1] => (item=4)
 changed: [node1] => (item=5)
 
+Using loop:
+---------------
 ```
 - name: Register with items 
     command: echo {{ item }}
@@ -31,3 +34,9 @@ changed: [node1] => (item=5)
 For the above code the output is
 TASK [Register with loop] **************************************************************************************************************************************************
 changed: [node1] => (item=[4, 5])
+
+-> From the above, we could see the output is different for loop -> changed: [node1] => (item=[4, 5])
+-> To get the o/p as same as with_items, we need to modify code as below:
+```
+loop: "{{ [4, 5] | flatten(1)}}"
+```
